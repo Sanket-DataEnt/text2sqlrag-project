@@ -53,8 +53,8 @@ class Settings(BaseSettings):
 
     # Storage Backend Configuration
     STORAGE_BACKEND: str = "s3"  # Options: "local", "s3"
-
-    
+    # UPLOAD_DIR: str = "data/uploads"
+    # CACHE_DIR: str = "data/cached_chunks"
 
     # Storage paths (auto-detects Lambda environment)
     @property
@@ -95,6 +95,7 @@ class Settings(BaseSettings):
     CACHE_TTL_RAG: int = 3600           # 1 hour - may change with new documents
     CACHE_TTL_SQL_GEN: int = 86400      # 24 hours - schema relatively stable
     CACHE_TTL_SQL_RESULT: int = 900     # 15 minutes - data changes frequently
+
 
     @property
     def is_lambda(self) -> bool:
