@@ -5,9 +5,9 @@ on:
     branches: [main]
 
 env:
-  AWS_REGION: us-east-1
-  ECR_REPOSITORY: rag-text-to-sql-server
-  LAMBDA_FUNCTION: rag-text-to-sql-server
+  AWS_REGION: us-east-2
+  ECR_REPOSITORY: rag-text-to-sql
+  LAMBDA_FUNCTION: rag-text-to-sql-serverless
 
 jobs:
   deploy:
@@ -565,3 +565,5 @@ jobs:
           echo ""
           echo "🔗 S3 Bucket: s3://${{ secrets.S3_CACHE_BUCKET }}"
           echo "=========================================="
+
+          
